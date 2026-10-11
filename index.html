@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MediCare HMS – Hospital Management System</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar" id="sidebar">
+      <div class="brand">
+        <span class="logo">✚</span>
+        <div>
+          <strong id="hospName">MediCare HMS</strong>
+          <small>Hospital Management</small>
+        </div>
+      </div>
+      <nav id="nav">
+        <a href="#dashboard" data-route="dashboard"><span>📊</span> Dashboard</a>
+        <a href="#patients" data-route="patients"><span>🧑</span> Patients</a>
+        <a href="#doctors" data-route="doctors"><span>🩺</span> Doctors</a>
+        <a href="#appointments" data-route="appointments"><span>📅</span> Appointments</a>
+        <a href="#bills" data-route="bills"><span>💳</span> Billing</a>
+        <a href="#data" data-route="data"><span>🗂️</span> JSON Data</a>
+      </nav>
+      <div class="side-foot">All data is stored as <b>JSON</b> in your browser</div>
+    </aside>
+
+    <div class="main">
+      <header class="topbar">
+        <button id="menuBtn" class="icon-btn" aria-label="Menu">☰</button>
+        <h1 id="pageTitle">Dashboard</h1>
+        <div class="top-right"><span id="clock"></span></div>
+      </header>
+      <main id="view"></main>
+    </div>
+  </div>
+
+  <div id="modal" class="modal hidden">
+    <div class="modal-card">
+      <div class="modal-head">
+        <h3 id="modalTitle"></h3>
+        <button class="icon-btn" id="modalClose" aria-label="Close">✕</button>
+      </div>
+      <div id="modalBody"></div>
+    </div>
+  </div>
+  <div id="toast" class="toast"></div>
+
+  <script src="js/db.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
